@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class 9093 {
+
+	public static void main(String[] args) {
+		
+        int num = 0;
+        String text;
+        String[] result;
+
+        Scanner sc = new Scanner(System.in);
+        num = sc.nextInt();
+        
+        for(int i = 0 ; i < num ; i++)
+        {        	
+            text = sc.nextLine();
+            result = text.split(" ");
+            
+            for(int j = 0 ; j <result.length ; j++)
+            {
+            	//reverse 메소드는 StringBuffer 객체를 리턴함
+            	StringBuffer sb = new StringBuffer(result[j]);
+            	//다시 sb를 toString() 함수를 이용해 String으로 변환
+            	result[j] = sb.reverse().toString();
+            	System.out.print(result[j] + " ");
+            }
+            
+        }
+	}
+
+}
