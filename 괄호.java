@@ -5,22 +5,26 @@ public class 괄호 {
 	public static void main(String[] args) {
 		
 		
-		int num;
+		int num = 0;
 		int left = 0;
 		int right = 0;
+        String text;
+        String r = "(";
+        String l = ")";
 		
 		Scanner sc = new Scanner(System.in);
 		num = sc.nextInt();
 		
-		for(int i = 0 ; i < num ; i++) {
-			String text = sc.nextLine();
+		for(int i = 0 ; i <= num ; i++) {
+			text = sc.next();
 			
 			for(int j = 0 ; j <text.length() ; j++) {
-				if(text.substring(j) == "(");
+                
+				if(text.substring(j,j+1).equals(r))
 				{
 					left++;
 				}
-				if(text.substring(j) == ")")
+				else if(text.substring(j,j+1).equals(l))
 				{
 					right++;
 				}
